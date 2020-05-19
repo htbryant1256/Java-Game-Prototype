@@ -34,6 +34,7 @@ public class Game {
 /*health is a final variable because I am still 
 working on the game and don't need that variable to change.*/
 		double enemyHealth = 5;
+//double variable
 		System.out.println("Welcome to Goblin Hunter 3!");
 		//Starting Screen
 		Scanner scan = new Scanner(System.in);
@@ -52,6 +53,7 @@ working on the game and don't need that variable to change.*/
 		
 		boolean start1 = true;
 		while(start1 == true) {
+//boolean variable			
 			String string1 = scan.nextLine();
 			if((string1.toUpperCase()).equals("LEFT")){
 				Transition(1);
