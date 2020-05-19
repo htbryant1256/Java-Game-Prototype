@@ -1,5 +1,7 @@
 # The-Crystal-Castle
 
+(Add your name as a comment at top of every file)
+(Add a description of the program as a comment at top)
 /*Henry Bryant
 I wanted to make a side scrolling game but I 
 didn't know enough yet to do so, so I used the 
