@@ -1,3 +1,26 @@
+/*Henry Bryant
+I wanted to make a side scrolling game but I 
+didn't know enough yet to do so, so I used the 
+text scrolling upward as a way to advance the stage.
+
+The Game is still very basic, no matter what you win.
+I plan on continuing the game.
+
+byte: Stores very small numbers
+char: Stores a single character
+short: Stores from around -33,000 to 33,000 
+int: Stores whole numbers
+long: Stores large whole numbers
+float: Stores decimal numbers up to 7 digits
+double: Stores decimal numbers up to 15 digits
+boolean: Stores True or False
+
+variable: a placeholder to store data.
+
+scope: acessability of a variable, depends on where 
+the variable was declared*/
+
+
 package GobPack;
 
 import java.util.Scanner;
@@ -7,9 +30,11 @@ public class Game {
 	public static void main(String[] args) {
 		//Starting Stats
 		
-		int health = 20;
+		final int health = 20;
+/*health is a final variable because I am still 
+working on the game and don't need that variable to change.*/
 		double enemyHealth = 5;
-		
+		System.out.println("Welcome to Goblin Hunter 3!");
 		//Starting Screen
 		Scanner scan = new Scanner(System.in);
 		sleep(500);
@@ -25,21 +50,21 @@ public class Game {
 		
 		//Scene One
 		
-		int start1 = 1;
-		while(start1 == 1) {
+		boolean start1 = true;
+		while(start1 == true) {
 			String string1 = scan.nextLine();
 			if((string1.toUpperCase()).equals("LEFT")){
 				Transition(1);
 				battle(1,health,enemyHealth);
 				battle_sim(0,health,enemyHealth);
-				start1 = 0;
+				start1 = false;
 				
 			}else if((string1.toUpperCase()).equals("RIGHT")) {
 				
 				Transition(2);
 				battle(2,health,enemyHealth);
 				battle_sim(0,health,enemyHealth);
-				start1 = 0;
+				start1 = false;
 				
 			}else {
 				System.out.println("Error, Please Type Again.");
@@ -49,62 +74,62 @@ public class Game {
 		
 		//Scene Two
 		
-		int start2 = 1;
-		while(start2 == 1) {
+		boolean start2 = true;
+		while(start2 == true) {
 			String string2 = scan.nextLine();
 			if((string2.toUpperCase()).equals("LEFT")){
 				Transition(1);
 				battle(1,health,enemyHealth);
 				battle_sim(0,health,enemyHealth);
-				start2 = 0;
+				start2 = false;
 				
 			}else if((string2.toUpperCase()).equals("RIGHT")) {
 				
 				Transition(2);
 				battle(2,health,enemyHealth);
 				battle_sim(0,health,enemyHealth);
-				start2 = 0;
+				start2 = false;
 				
 			}else {
 				System.out.println("Error, Please Type Again.");
 			}
 		}
 			
-		int start3 = 1;
-		while(start3 == 1) {
+		boolean start3 = true;
+		while(start3 == true) {
 			String string3 = scan.nextLine();
 			if((string3.toUpperCase()).equals("LEFT")){
 				Transition(1);
 				battle(1,health,enemyHealth);
 				battle_sim(0,health,enemyHealth);
-				start3 = 0;
+				start3 = false;
 				
 			}else if((string3.toUpperCase()).equals("RIGHT")) {
 				
 				Transition(2);
 				battle(2,health,enemyHealth);
 				battle_sim(0,health,enemyHealth);
-				start3 = 0;
+				start3 = false;
 				
 			}else {
 				System.out.println("Error, Please Type Again.");
 			}
 		}
-		int start_boss = 1;
-		while(start_boss == 1) {
+		boolean start_boss = true;
+		while(start_boss == true) {
 			String string_boss = scan.nextLine();
 			if((string_boss.toUpperCase()).equals("LEFT")){
 				Transition(1);
 				battle(3,health,enemyHealth);
 				battle_sim(1,health,enemyHealth);
-				start_boss = 0;
+				start_boss = false;
 				
 			}else if((string_boss.toUpperCase()).equals("RIGHT")) {
 				
 				Transition(2);
 				battle(3,health,enemyHealth);
 				battle_sim(1,health,enemyHealth);
-				start_boss = 0;
+				start_boss = false;
 				
 			}else {
 				System.out.println("Error, Please Type Again.");
@@ -284,11 +309,11 @@ public static void battle(int choice, int health_2, double enemy_2) {
 }
 
 public static void battle_sim(int boss, int health, double enemyHealth) {
-	int battle = 1;
+	boolean battle = true;
 	
 	Scanner scan_battle = new Scanner(System.in);
 	
-	while(battle == 1) {
+	while(battle == true) {
 		String battle_choice = scan_battle.next();
 		if((battle_choice.toUpperCase()).equals("ATTACK") && (enemyHealth > 0)){
 			enemyHealth -= 2.5;
@@ -322,7 +347,7 @@ public static void battle_sim(int boss, int health, double enemyHealth) {
 			
 		
 		}else if((battle_choice.toUpperCase()).equals("RUN") && (boss != 1)){
-			battle = 0;
+			battle = false;
 			sleep(500);
 			System.out.println("|##########|     |########|");
 			sleep(100);
@@ -369,9 +394,9 @@ public static void battle_sim(int boss, int health, double enemyHealth) {
 			System.out.println("|#                       #|");
 			sleep(100);
 			System.out.println("|###|   |#########|   |###|");
-			battle = 0;
+			battle = false;
 	}else if(enemyHealth <= 0 && (boss == 1)) {
-		battle = 0;
+		battle = false;
 }
 		}
 }
