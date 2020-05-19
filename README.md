@@ -1,6 +1,6 @@
 # The-Crystal-Castle
 
-Milestone 1
+## Milestone 1
 
 (Add your name as a comment at top of every file)
 (Add a description of the program as a comment at top)
