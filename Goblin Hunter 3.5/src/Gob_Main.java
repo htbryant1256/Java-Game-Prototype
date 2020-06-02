@@ -15,7 +15,7 @@ import java.util.Random;
 
 public class Gob_Main {
 	public static void main(String[] args) {
-		
+
 		int counter = 4;
 		int health = 30;
 		double enemyHealth = 7;
@@ -32,7 +32,7 @@ public class Gob_Main {
 		health = get_scene(2, rand, scan, health, enemyHealth, bossHealth);
 		health = get_scene(3, rand, scan, health, enemyHealth, bossHealth);
 		health = get_scene(4, rand, scan, health, enemyHealth, bossHealth);
-		for(int i = 1; i < counter; i++) {
+		for (int i = 1; i < counter; i++) {
 			System.out.println(i + "...");
 			sleep(1000);
 			// the continue command immediately jumps to the update statment
@@ -51,9 +51,10 @@ public class Gob_Main {
 		boolean start3 = true;
 		boolean start_boss = true;
 
-		switch(select) {
+		switch (select) {
 
-		case 1:	do {
+		case 1:
+			do {
 				String string1 = scan.nextLine();
 				if ((string1.toUpperCase()).equals("LEFT")) {
 					Transition(1);
@@ -71,10 +72,10 @@ public class Gob_Main {
 					System.out.println("Type Your Choice");
 				}
 			} while (start1 == true);
-		break;
-		
+			break;
 
-	case 2:	do {
+		case 2:
+			do {
 				String string2 = scan.nextLine();
 				if ((string2.toUpperCase()).equals("LEFT")) {
 					Transition(1);
@@ -90,9 +91,10 @@ public class Gob_Main {
 					System.out.println("Type Your Choice");
 				}
 			} while (start2 == true);
-	break;
+			break;
 
-	case 3:	do {
+		case 3:
+			do {
 				String string3 = scan.nextLine();
 				if ((string3.toUpperCase()).equals("LEFT")) {
 					Transition(1);
@@ -108,8 +110,9 @@ public class Gob_Main {
 					System.out.println("Type Your Choice");
 				}
 			} while (start3 == true);
-	break;
-	case 4: do {
+			break;
+		case 4:
+			do {
 				String string_boss = scan.nextLine();
 				if ((string_boss.toUpperCase()).equals("LEFT")) {
 					Transition(1);
@@ -125,8 +128,8 @@ public class Gob_Main {
 					System.out.println("Type Your Choice");
 				}
 			} while (start_boss == true);
-	break;
-	case 5:
+			break;
+		case 5:
 			sleep(500);
 			System.out.println(" _________________________");
 			sleep(100);
@@ -147,7 +150,7 @@ public class Gob_Main {
 			System.out.println("|#########################|");
 			sleep(100);
 			break;
-	case 0:
+		case 0:
 			System.out.println("Welcome to Goblin Hunter 3!");
 			sleep(1000);
 			System.out.println(" _________________________");
@@ -161,7 +164,7 @@ public class Gob_Main {
 			System.out.println("|###|   |#########|   |###|");
 			break;
 		}
-		
+
 		return health;
 	}
 
