@@ -1,44 +1,9 @@
-# The-Crystal-Castle
+Identify a method call and argument in comments: A method call is simply when a method is called and run, an argument is data that is sent into the method.
 
-## Milestone 1
+Identify a header and parameter in comments: A method header is the code that initialized the method, a parameter is found in the method header as data that will be used from outside the method
 
-**Add your name as a comment at top of every file
-  Add a description of the program as a comment at top**  
-/*Henry Bryant
-I wanted to make a side scrolling game but I 
-didn't know enough yet to do so, so I used the 
-text scrolling upward as a way to advance the stage.
+Make a comment describing how == works with objects: The "==" operator does not work with strings because it compares the instances of two objects not the true value of them. That is why .equals is used instead, this command compares the values in the string instead of the instances. Describe operator precedence as a comment
 
-The Game is still very basic, no matter what you win.
-I plan on continuing the game.
+Use break in a loop with a comment describing what it does: The break command immediately ends the current loop and runs anycode after the loop.
 
-**Add a list and description of Java built-in data types within the user interface or in comments**   
-byte: Stores very small numbers
-char: Stores a single character
-short: Stores from around -33,000 to 33,000 
-int: Stores whole numbers
-long: Stores large whole numbers
-float: Stores decimal numbers up to 7 digits
-double: Stores decimal numbers up to 15 digits
-boolean: Stores True or False
-
-**Define (in English) the term "variable" as it relates to computer programming in a comment or the user interface**    
-variable: a placeholder to store data.
-
-**Define (in English) the term "scope" as it relates to computer programming in a comment or the user interface**    
-scope: acessability of a variable, depends on where 
-the variable was declared*/
-
-**Use final with a variable and describe what it means in a comment**    
-final int health = 20;
-/*health is a final variable because I am still 
-working on the game and don't need that variable to change.*/
-
-**Use a boolean variable with an appropriate name  (singular noun, lowerCamelCase)**   
-boolean start1 = true;
-		while(start1 == true) {
-   //boolean variable
-   
-**Use an double variable with an appropriate name (singular noun, lowerCamelCase)**     
-  double enemyHealth = 5;
-//double variable
+Use continue in a loop with a comment describing what it does: The continue command goes to the conditional statment and compares again.
