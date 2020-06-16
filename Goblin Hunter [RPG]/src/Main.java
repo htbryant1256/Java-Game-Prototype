@@ -1,4 +1,5 @@
 /* Henry Bryant
+
  * Inheritance is when data from a larger parent class can be used
  * in smaller child classes. Parent classes can't use new data created
  * in a child class because of this inheritance.
@@ -387,7 +388,7 @@ public class Main {
 			String input = scan.nextLine();
 
 			playerRoll = (rand.nextInt(20) + 1) + weaponDex;
-			enemyPhoto photo = new enemyPhoto();
+			EnemyPhoto photo = new EnemyPhoto();
 
 			if ((playerRoll >= enemyRoll)) {
 
